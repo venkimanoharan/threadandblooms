@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thread & Blooms - Contact Me</title>
+    <title>Thread and Blooms - Handcrafted Crochet Blanket Bouquets</title>
     <style>
         * {
             margin: 0;
@@ -13,185 +13,397 @@
 
         body {
             font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #ffeef8 0%, #fff5e6 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            color: #2c2c2c;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-            max-width: 500px;
+        header {
+            position: fixed;
             width: 100%;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #8b6f47;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #2c2c2c;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #8b6f47;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #faf8f5 0%, #f5e6d3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(213, 184, 155, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(186, 159, 130, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(5deg); }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            color: #8b6f47;
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #5a5a5a;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: #8b6f47;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .cta-button:hover {
+            background: #6d5536;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 111, 71, 0.3);
+        }
+
+        section {
+            padding: 6rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #8b6f47;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #7a7a7a;
+            margin-bottom: 4rem;
+            font-style: italic;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 111, 71, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: #8b6f47;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .gallery {
+            background: #faf8f5;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d5c0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item::after {
+            content: '🌸';
+            font-size: 4rem;
+            opacity: 0.3;
+        }
+
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #555;
+        }
+
+        .contact {
+            background: linear-gradient(135deg, #8b6f47 0%, #6d5536 100%);
+            color: white;
             text-align: center;
         }
 
-        h1 {
-            color: #d4577a;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-family: 'Brush Script MT', cursive;
+        .contact .section-title,
+        .contact .section-subtitle {
+            color: white;
         }
 
-        .tagline {
-            color: #8b6f47;
-            font-style: italic;
-            margin-bottom: 30px;
-            font-size: 1.1em;
-        }
-
-        .contact-methods {
-            display: grid;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .contact-btn {
+        .contact-info {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 12px;
-            padding: 15px 20px;
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 12px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
         }
 
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .contact-btn.whatsapp {
-            border-color: #25D366;
-            color: #25D366;
+        .contact-item-icon {
+            font-size: 2rem;
         }
 
-        .contact-btn.whatsapp:hover {
-            background: #25D366;
-            color: white;
+        footer {
+            background: #2c2c2c;
+            color: #ccc;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
         }
 
-        .contact-btn.facebook {
-            border-color: #1877F2;
-            color: #1877F2;
-        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
 
-        .contact-btn.facebook:hover {
-            background: #1877F2;
-            color: white;
-        }
+            .hero p {
+                font-size: 1.1rem;
+            }
 
-        .contact-btn.instagram {
-            border-color: #E4405F;
-            color: #E4405F;
-        }
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
 
-        .contact-btn.instagram:hover {
-            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-            color: white;
+            .section-title {
+                font-size: 2rem;
+            }
         }
-
-        .contact-btn.email {
-            border-color: #EA4335;
-            color: #EA4335;
-        }
-
-        .contact-btn.email:hover {
-            background: #EA4335;
-            color: white;
-        }
-
-        .contact-btn.sms {
-            border-color: #8b6f47;
-            color: #8b6f47;
-        }
-
-        .contact-btn.sms:hover {
-            background: #8b6f47;
-            color: white;
-        }
-
-        .icon {
-            width: 24px;
-            height: 24px;
-        }
-
-        .footer {
-            margin-top: 30px;
-            color: #999;
-            font-size: 0.9em;
-        }
-
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Thread & Blooms</h1>
-        <p class="tagline">Handcrafted with Love 🧶🌸</p>
+    <header>
+        <nav>
+            <div class="logo">THREAD AND BLOOMS</div>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <p style="color: #8b6f47; margin-bottom: 30px; font-size: 1.1em;">
-            Choose your preferred way to reach me!
-        </p>
-
-        <div class="contact-methods">
-            <a href="#" class="contact-btn whatsapp" id="whatsappBtn">
-                <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
-            </a>
-            
-            <a href="#" class="contact-btn sms" id="smsBtn">
-                <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
-                Text Message
-            </a>
-
-            <a href="#" class="contact-btn facebook" id="facebookBtn" target="_blank">
-                <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                Facebook
-            </a>
-
-            <a href="#" class="contact-btn instagram" id="instaBtn" target="_blank">
-                <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                Instagram
-            </a>
-
-            <a href="#" class="contact-btn email" id="emailBtn">
-                <svg class="icon" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                Email
-            </a>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Handcrafted with Love</h1>
+            <p>Where cozy blankets meet the elegance of floral bouquets</p>
+            <a href="#contact" class="cta-button">ORDER YOURS TODAY</a>
         </div>
+    </section>
 
-        <div class="footer">
-            <p>✨ Let's create something beautiful together! ✨</p>
-            <p style="margin-top: 10px; font-weight: 600; color: #d4577a;">- Vidhya</p>
+    <section id="about" class="about">
+        <h2 class="section-title">The Art of Crochet Bouquets</h2>
+        <p class="section-subtitle">Timeless gifts, lovingly handmade</p>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🧶</div>
+                <h3>Handcrafted Quality</h3>
+                <p>Each blanket bouquet is meticulously crocheted with premium yarns, ensuring lasting beauty and warmth.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌸</div>
+                <h3>Unique Designs</h3>
+                <p>Artfully arranged to resemble stunning flower bouquets, perfect for any occasion or home décor.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💝</div>
+                <h3>Thoughtful Gifts</h3>
+                <p>The perfect blend of practicality and sentiment, making unforgettable gifts for loved ones.</p>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        // Update these with your actual contact information
-        const contactInfo = {
-            phone: '+12108129723',           // Your phone with country code
-            email: 'threadandblooms@email.com',
-            facebook: 'threadandblooms',    // Your Facebook username
-            instagram: 'threadandblooms'    // Your Instagram username
-        };
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">Our Creations</h2>
+        <p class="section-subtitle">Each piece tells a story</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+            <div class="gallery-item"></div>
+        </div>
+    </section>
 
-        // Set up all contact links
-        document.getElementById('whatsappBtn').href = `https://wa.me/${contactInfo.phone.replace(/[^0-9]/g, '')}`;
-        document.getElementById('smsBtn').href = `sms:${contactInfo.phone}`;
-        document.getElementById('facebookBtn').href = `https://facebook.com/${contactInfo.facebook}`;
-        document.getElementById('instaBtn').href = `https://instagram.com/${contactInfo.instagram}`;
-        document.getElementById('emailBtn').href = `mailto:${contactInfo.email}`;
-    </script>
+    <section class="about">
+        <h2 class="section-title">Made from Home, Made with Heart</h2>
+        <div class="about-content">
+            <p>Every crochet blanket bouquet is lovingly handcrafted in the comfort of our home studio. Each stitch carries intention, each color is carefully chosen, and every arrangement is designed to bring warmth and joy to your life. What began as a passion has blossomed into a dedication to creating beautiful, functional art that celebrates life's special moments.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Let's Create Something Beautiful</h2>
+        <p class="section-subtitle">Get in touch to discuss custom orders and designs</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-item-icon">📧</div>
+                <div>your.email@example.com</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item-icon">📱</div>
+                <div>(555) 123-4567</div>
+            </div>
+            <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <div>Fort Worth, Texas</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Thread and Blooms. All rights reserved. Handcrafted with love in Texas.</p>
+    </footer>
 </body>
 </html>
