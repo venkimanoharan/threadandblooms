@@ -234,7 +234,12 @@
         /* HERO */
         .hero {
             min-height: 90vh;
-            background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
+            background: 
+                linear-gradient(135deg, rgba(250, 248, 245, 0.95) 0%, rgba(245, 230, 211, 0.95) 100%),
+                url('images/TAB5.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             padding-top: 120px;
             display: flex;
             justify-content: center;
@@ -242,6 +247,15 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        [data-theme="dark"] .hero {
+            background: 
+                linear-gradient(135deg, rgba(26, 26, 26, 0.92) 0%, rgba(37, 37, 37, 0.92) 100%),
+                url('images/TAB5.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .hero::before {
@@ -770,11 +784,11 @@
         </div>
         <div class="contact-card">
             <h3>💬 WhatsApp</h3>
-            <p><a href="https://wa.me/12108129723" target="_blank" style="color: white; text-decoration: none;">+1 (210) 812-9723</a></p>
+            <p><a href="https://wa.me/12108129723" target="_blank" style="color: white; text-decoration: none;">(210) 812-9723</a></p>
         </div>
         <div class="contact-card">
             <h3>📱 Text/Call</h3>
-            <p><a href="tel:+12108129723" style="color: white; text-decoration: none;">+1 (210) 812-9723</a></p>
+            <p><a href="tel:+12108129723" style="color: white; text-decoration: none;">(210) 812-9723</a></p>
         </div>
         <div class="contact-card">
             <h3>📍 Location</h3>
