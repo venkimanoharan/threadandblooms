@@ -510,6 +510,7 @@
             color: white;
             padding-top: 5rem;
             padding-bottom: 5rem;
+            display: none;
         }
 
         .contact-grid {
@@ -567,6 +568,10 @@
             animation-delay: 0.5s;
         }
 
+        .float-btn:nth-child(3) {
+            animation-delay: 1s;
+        }
+
         .whatsapp-float {
             background: #25D366;
         }
@@ -592,6 +597,21 @@
         }
 
         .sms-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        .email-float {
+            background: #EA4335;
+        }
+
+        .email-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(234, 67, 53, 0.6);
+        }
+
+        .email-float svg {
             width: 32px;
             height: 32px;
             fill: white;
@@ -636,18 +656,6 @@
 
             .hero h1 { font-size: 2.5rem; }
 
-            .whatsapp-float {
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-            }
-
-            .whatsapp-float svg {
-                width: 28px;
-                height: 28px;
-            }
-
             .float-buttons {
                 bottom: 20px;
                 right: 20px;
@@ -659,7 +667,17 @@
                 height: 50px;
             }
 
+            .whatsapp-float svg {
+                width: 28px;
+                height: 28px;
+            }
+
             .sms-float svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .email-float svg {
                 width: 26px;
                 height: 26px;
             }
@@ -714,7 +732,6 @@
                     </a>
                 </div>
             </div>
-            <a href="#contact" class="cta-button secondary">Get in Touch</a>
         </div>
     </div>
 </section>
@@ -772,31 +789,6 @@
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2 class="section-title" style="color: white;">Get In Touch</h2>
-    <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Let's create something beautiful together</p>
-
-    <div class="contact-grid">
-        <div class="contact-card">
-            <h3>📧 Email</h3>
-            <p><a href="mailto:hello@threadandblooms.com" style="color: white; text-decoration: none;">hello@threadandblooms.com</a></p>
-        </div>
-        <div class="contact-card">
-            <h3>💬 WhatsApp</h3>
-            <p><a href="https://wa.me/12108129723" target="_blank" style="color: white; text-decoration: none;">(210) 812-9723</a></p>
-        </div>
-        <div class="contact-card">
-            <h3>📱 Text/Call</h3>
-            <p><a href="tel:+12108129723" style="color: white; text-decoration: none;">(210) 812-9723</a></p>
-        </div>
-        <div class="contact-card">
-            <h3>📍 Location</h3>
-            <p>San Antonio, Texas</p>
-        </div>
-    </div>
-</section>
-
 <footer>
     <p>&copy; 2024 Thread and Blooms by Vidhya. All Rights Reserved.</p>
     <p style="margin-top: 0.5rem; font-size: 0.8rem;">Handcrafted with love in San Antonio, Texas 🧶</p>
@@ -812,6 +804,11 @@
     <a href="sms:+12108129723" class="float-btn sms-float" aria-label="Send SMS">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM9 11H7V9h2v2zm4 0h-2V9h2v2zm4 0h-2V9h2v2z"/>
+        </svg>
+    </a>
+    <a href="mailto:hello@threadandblooms.com" class="float-btn email-float" aria-label="Send Email">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
         </svg>
     </a>
 </div>
