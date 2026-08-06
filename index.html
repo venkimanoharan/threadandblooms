@@ -8,23 +8,26 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E🧶%3C/text%3E%3C/svg%3E">
 
     <!-- SEO -->
-    <title>Thread and Blooms – Handcrafted Crochet Blanket Bouquets by Vidhya</title>
-    <meta name="description" content="Thread and Blooms by Vidhya creates luxurious handcrafted crochet blanket bouquets in San Antonio, Texas. Unique, custom-made gifts woven with love.">
-    <meta name="keywords" content="crochet blanket bouquet, crochet gifts, handcrafted bouquets, Thread and Blooms, Vidhya crochet, custom crochet Texas">
+    <title>Thread and Blooms – Handcrafted Crochet Blanket Bouquets in San Antonio, TX</title>
+    <meta name="description" content="Handcrafted crochet blanket bouquets by Vidhya, made to order in San Antonio, Texas. Starting at $50. Local pickup & delivery, 1-2 week turnaround. The perfect gift for weddings, baby showers & more.">
+    <meta name="keywords" content="crochet blanket bouquet, crochet gifts, handcrafted bouquets, Thread and Blooms, Vidhya crochet, custom crochet Texas, San Antonio crochet gifts">
     <meta name="author" content="Thread and Blooms">
     <link rel="canonical" href="https://threadandblooms.com" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Thread and Blooms – Crochet Blanket Bouquets" />
-    <meta property="og:description" content="Handcrafted crochet blanket bouquet gifts lovingly made by Vidhya." />
+    <meta property="og:description" content="Handcrafted crochet blanket bouquet gifts lovingly made by Vidhya in San Antonio, TX. Starting at $50." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/TAB1.jpeg" />
+    <meta property="og:url" content="https://threadandblooms.com" />
+    <meta property="og:site_name" content="Thread and Blooms" />
+    <meta property="og:image" content="https://threadandblooms.com/images/TAB1.jpeg" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Thread and Blooms – Crochet Blanket Bouquets">
-    <meta name="twitter:description" content="Handcrafted crochet blanket bouquet gifts lovingly made by Vidhya.">
+    <meta name="twitter:description" content="Handcrafted crochet blanket bouquet gifts lovingly made by Vidhya in San Antonio, TX.">
+    <meta name="twitter:image" content="https://threadandblooms.com/images/TAB1.jpeg">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -44,7 +47,9 @@
             "addressCountry": "US"
         },
         "url": "https://threadandblooms.com",
-        "priceRange": "$$"
+        "image": "https://threadandblooms.com/images/TAB1.jpeg",
+        "priceRange": "$50-$120",
+        "sameAs": ["https://www.instagram.com/threadandbloom.satx/"]
     }
     </script>
 
@@ -289,6 +294,28 @@
             font-style: italic;
         }
 
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .trust-badge {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-dark);
+            background: rgba(139,111,71,0.08);
+            border: 1px solid rgba(139,111,71,0.25);
+            padding: 0.4rem 0.9rem;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
         .cta-buttons {
             display: flex;
             justify-content: center;
@@ -445,6 +472,204 @@
             margin-bottom: 0.7rem;
         }
 
+        /* HOW IT WORKS */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: var(--gold);
+            color: white;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .step-card h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+            font-size: 1.15rem;
+        }
+
+        .step-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: white;
+            border: 2px solid var(--beige);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        [data-theme="dark"] .price-card {
+            background: var(--beige);
+        }
+
+        .price-card.featured {
+            border-color: var(--gold);
+            transform: scale(1.03);
+        }
+
+        .price-card:hover {
+            box-shadow: 0 12px 30px rgba(139,111,71,0.2);
+        }
+
+        .price-tag {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+        }
+
+        .price-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: var(--text-dark);
+            margin: 0.5rem 0;
+        }
+
+        .price-amount span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .price-card p.price-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-note {
+            text-align: center;
+            color: var(--text-light);
+            font-style: italic;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        [data-theme="dark"] .faq-item {
+            background: var(--beige);
+        }
+
+        .faq-item summary {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--gold);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-item p {
+            padding: 0 1.5rem 1.2rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Social icon in nav/footer */
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            transition: var(--transition);
+        }
+
+        .social-icon:hover {
+            color: var(--gold-dark);
+            transform: scale(1.1);
+        }
+
+        .social-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        footer .social-icon {
+            color: #ccc;
+            margin-top: 0.8rem;
+        }
+
+        footer .social-icon:hover {
+            color: white;
+        }
+
         /* ABOUT */
         .about-highlight {
             margin-top: 3rem;
@@ -510,7 +735,11 @@
             color: white;
             padding-top: 5rem;
             padding-bottom: 5rem;
-            display: none;
+        }
+
+        .contact .section-title,
+        .contact .section-subtitle {
+            color: white;
         }
 
         .contact-grid {
@@ -656,6 +885,10 @@
 
             .hero h1 { font-size: 2.5rem; }
 
+            .hero { background-attachment: scroll; }
+
+            .price-card.featured { transform: none; }
+
             .float-buttons {
                 bottom: 20px;
                 right: 20px;
@@ -694,8 +927,13 @@
                 <li><a href="#home" onclick="closeMenu()">Home</a></li>
                 <li><a href="#about" onclick="closeMenu()">About</a></li>
                 <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+                <li><a href="#pricing" onclick="closeMenu()">Pricing</a></li>
+                <li><a href="#faq" onclick="closeMenu()">FAQ</a></li>
                 <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
+            <a class="social-icon" href="https://www.instagram.com/threadandbloom.satx/" target="_blank" rel="noopener" aria-label="Thread and Blooms on Instagram">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.25A3.25 3.25 0 1 1 12 8.75a3.25 3.25 0 0 1 0 6.5zm5.25-8.7a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34z"/></svg>
+            </a>
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
                 <span id="themeIcon">🌙</span>
             </button>
@@ -712,7 +950,14 @@
         <h1 class="fade-in">Thread and Blooms</h1>
         <p class="fade-in delay-1">Handcrafted crochet blanket bouquets lovingly made by Vidhya</p>
 
-        <div class="cta-buttons fade-in delay-2">
+        <div class="trust-badges fade-in delay-2">
+            <span class="trust-badge">📍 San Antonio, TX</span>
+            <span class="trust-badge">🧶 Made to Order</span>
+            <span class="trust-badge">⏱️ 1–2 Week Turnaround</span>
+            <span class="trust-badge">💵 Starting at $50</span>
+        </div>
+
+        <div class="cta-buttons fade-in delay-3">
             <div class="order-dropdown">
                 <button class="cta-button primary" style="cursor: pointer; border: none; font-family: 'Inter', sans-serif;">
                     ORDER NOW ▾
@@ -732,6 +977,7 @@
                     </a>
                 </div>
             </div>
+            <a href="#pricing" class="cta-button secondary">VIEW PRICING</a>
         </div>
     </div>
 </section>
@@ -766,6 +1012,35 @@
     </div>
 </section>
 
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-subtitle">From your vision to your doorstep in four simple steps</p>
+
+    <div class="steps">
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Reach Out</h3>
+            <p>Message us on WhatsApp or text with your occasion, colors, and vision.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Get a Quote</h3>
+            <p>We'll confirm size, flower selection, and an exact price for your design.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Handcrafted With Love</h3>
+            <p>Vidhya crochets your bouquet by hand — most orders are ready in 1–2 weeks.</p>
+        </div>
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <h3>Local Pickup or Delivery</h3>
+            <p>Arrange local pickup or delivery within San Antonio, TX.</p>
+        </div>
+    </div>
+</section>
+
 <!-- GALLERY -->
 <section id="gallery">
     <h2 class="section-title">Gallery</h2>
@@ -785,13 +1060,96 @@
         <div class="gallery-item"><img data-src="images/TAB11.jpeg" alt="Crochet blanket bouquet 11" loading="lazy"></div>
         <div class="gallery-item"><img data-src="images/TAB12.jpeg" alt="Crochet blanket bouquet 12" loading="lazy"></div>
         <div class="gallery-item"><img data-src="images/TAB13.jpeg" alt="Crochet blanket bouquet 13" loading="lazy"></div>
-        <div class="gallery-item"><img data-src="images/TAB14.jpeg" alt="Crochet blanket bouquet 14" loading="lazy"></div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+    <h2 class="section-title">Simple, Transparent Pricing</h2>
+    <p class="section-subtitle">Every bouquet is handcrafted to order</p>
+
+    <div class="pricing-grid">
+        <div class="price-card">
+            <h3>2-Foot Bouquet</h3>
+            <div class="price-amount">$50<span>+</span></div>
+            <p class="price-desc">A sweet, personal gift — perfect for birthdays, get-well-soons, or a thoughtful surprise.</p>
+            <a href="https://wa.me/12108129723" target="_blank" class="cta-button primary">Order This Size</a>
+        </div>
+        <div class="price-card featured">
+            <span class="price-tag">Most Popular</span>
+            <h3>4-Foot Bouquet</h3>
+            <div class="price-amount">$120<span>+</span></div>
+            <p class="price-desc">A stunning statement piece for weddings, baby showers & big celebrations.</p>
+            <a href="https://wa.me/12108129723" target="_blank" class="cta-button primary">Order This Size</a>
+        </div>
+    </div>
+    <p class="pricing-note">Final pricing varies based on flower selection and customization — message us on WhatsApp or text for an exact quote.</p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-subtitle">Everything you need to know before you order</p>
+
+    <div class="faq-list">
+        <details class="faq-item">
+            <summary>How long does it take to receive my order?</summary>
+            <p>Most bouquets are handcrafted and ready within 1–2 weeks of confirming your order, depending on size and current order volume.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Do you ship outside San Antonio?</summary>
+            <p>Right now, Thread and Blooms is local pickup and local delivery only within San Antonio, Texas. We don't currently ship nationwide — message us to check delivery availability in your area.</p>
+        </details>
+        <details class="faq-item">
+            <summary>How much does a bouquet cost?</summary>
+            <p>Pricing starts at $50 for a 2-foot bouquet and $120 for a 4-foot bouquet, varying based on flower selection and customization. Message us for an exact quote for your design.</p>
+        </details>
+        <details class="faq-item">
+            <summary>Can I customize the colors and flowers?</summary>
+            <p>Yes! Every bouquet is made to order. Share your color palette, occasion, and any special requests, and we'll design something one-of-a-kind for you.</p>
+        </details>
+        <details class="faq-item">
+            <summary>How do I care for my crochet bouquet?</summary>
+            <p>Keep it out of direct sunlight and away from moisture to preserve the yarn colors. Spot clean gently with a damp cloth — these are decorative pieces made to be treasured for years, not real flowers that wilt.</p>
+        </details>
+        <details class="faq-item">
+            <summary>How do I place an order?</summary>
+            <p>Tap "Order Now" to message us on WhatsApp or text, or reach out on Instagram <a href="https://www.instagram.com/threadandbloom.satx/" target="_blank" rel="noopener">@threadandbloom.satx</a>. We'll walk you through sizing, flower options, and timeline.</p>
+        </details>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Let's Create Something Beautiful</h2>
+    <p class="section-subtitle" style="color: rgba(255,255,255,0.85);">Reach out through whichever way is easiest for you</p>
+
+    <div class="contact-grid">
+        <a href="https://wa.me/12108129723" target="_blank" class="contact-card" style="text-decoration:none; color:inherit;">
+            <h3>WhatsApp</h3>
+            <p>Fastest way to reach us</p>
+        </a>
+        <a href="sms:+12108129723" class="contact-card" style="text-decoration:none; color:inherit;">
+            <h3>Text Message</h3>
+            <p>(210) 812-9723</p>
+        </a>
+        <a href="mailto:hello@threadandblooms.com" class="contact-card" style="text-decoration:none; color:inherit;">
+            <h3>Email</h3>
+            <p>hello@threadandblooms.com</p>
+        </a>
+        <a href="https://www.instagram.com/threadandbloom.satx/" target="_blank" class="contact-card" style="text-decoration:none; color:inherit;">
+            <h3>Instagram</h3>
+            <p>@threadandbloom.satx</p>
+        </a>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 Thread and Blooms by Vidhya. All Rights Reserved.</p>
+    <p>&copy; <span id="year"></span> Thread and Blooms by Vidhya. All Rights Reserved.</p>
     <p style="margin-top: 0.5rem; font-size: 0.8rem;">Handcrafted with love in San Antonio, Texas 🧶</p>
+    <a class="social-icon" href="https://www.instagram.com/threadandbloom.satx/" target="_blank" rel="noopener" aria-label="Thread and Blooms on Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.256 1.216.6 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.25A3.25 3.25 0 1 1 12 8.75a3.25 3.25 0 0 1 0 6.5zm5.25-8.7a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34z"/></svg>
+    </a>
 </footer>
 
 <!-- Floating Contact Buttons -->
@@ -845,6 +1203,9 @@
         
         // Initialize lazy loading
         lazyLoadImages();
+
+        // Set footer year
+        document.getElementById('year').textContent = new Date().getFullYear();
     });
 
     // Lazy Loading Images
